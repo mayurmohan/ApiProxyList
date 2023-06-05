@@ -7,7 +7,9 @@ node() {
   }
 	
   stage('apiProxyList Command') {
-	
-	apiProxyList script: this
+      setupCommonPipelineEnvironment script: this
+      print "api Proxy List:" 
+     apiProxyList script: this
+     print  commonPipelineEnvironment.getValue("custom/apiProxyList")	  
   }
 }
