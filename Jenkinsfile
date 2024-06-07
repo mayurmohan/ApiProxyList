@@ -10,6 +10,6 @@ node() {
       setupCommonPipelineEnvironment script: this
       print "api Proxy List:" 
      apiProxyList script: this
-     print  commonPipelineEnvironment.getValue("custom/apiProxyList")	  
+     print  commonPipelineEnvironment.getValue("apiProxyList")	  
   }
 }
